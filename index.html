@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Camp Barrk — Adventure Dog Daycare &amp; Boarding in Brooklyn &amp; Queens</title>
+<meta name="description" content="Camp Barrk is an adventure-based dog daycare and boarding service in Brooklyn &amp; Queens, run by veterinary technician Fallon Barr. Hiking, swimming, trail running and tender, skilled care." />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Camp Barrk — Adventure Dog Daycare & Boarding" />
+<meta property="og:description" content="Adventure-based dog daycare & boarding in Brooklyn & Queens. Run by a veterinary technician with 15+ years of experience." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+<style>
+:root{
+  --rust:#c4592b;
+  --rust-dark:#a3461f;
+  --forest:#2f5d4f;
+  --forest-dark:#22463b;
+  --sky:#7fb4d6;
+  --sand:#f3e7d3;
+  --cream:#fbf5ea;
+  --ink:#2b2620;
+  --muted:#6f6655;
+  --gold:#e6a431;
+  --shadow:0 14px 38px rgba(43,38,32,.14);
+  --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Nunito",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4,.logo-text{font-family:"Baloo 2",system-ui,sans-serif;line-height:1.1;font-weight:700}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:"Baloo 2",sans-serif;font-weight:700;font-size:1.02rem;
+  padding:.85rem 1.6rem;border-radius:50px;border:none;cursor:pointer;
+  text-decoration:none;transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--rust);color:#fff;box-shadow:0 8px 20px rgba(196,89,43,.35)}
+.btn-primary:hover{background:var(--rust-dark)}
+.btn-ghost{background:rgba(255,255,255,.16);color:#fff;border:2px solid rgba(255,255,255,.7);backdrop-filter:blur(2px)}
+.btn-forest{background:var(--forest);color:#fff;box-shadow:0 8px 20px rgba(47,93,79,.3)}
+.btn-forest:hover{background:var(--forest-dark)}
+
+/* ---------- Image placeholder styling (swapped for real photos later) ---------- */
+.ph{
+  position:relative;background:linear-gradient(135deg,#9fc6d8,#cfe0d0 55%,#e9d8b8);
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  color:var(--forest-dark);font-family:"Baloo 2",sans-serif;font-weight:600;
+  border-radius:var(--radius);overflow:hidden;
+}
+.ph::after{content:none}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* ---------- Header ---------- */
+header.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,245,234,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(43,38,32,.08);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:.55rem 22px;max-width:1140px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.brand .mark{width:46px;height:46px;border-radius:50%;background:#fff;border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.brand .mark img{width:100%;height:100%;object-fit:contain;padding:2px}
+.brand .logo-text{font-size:1.35rem;letter-spacing:.5px}
+.nav-links{display:flex;align-items:center;gap:1.5rem}
+.nav-links a{text-decoration:none;font-weight:700;font-family:"Baloo 2",sans-serif;color:var(--ink);font-size:1rem}
+.nav-links a:hover{color:var(--rust)}
+.nav-links .btn{padding:.55rem 1.1rem;font-size:.95rem}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.7rem;color:var(--ink)}
+@media(max-width:860px){
+  .nav-links{position:fixed;inset:64px 0 auto 0;flex-direction:column;background:var(--cream);padding:1.2rem 22px 1.6rem;gap:1rem;border-bottom:1px solid rgba(0,0,0,.08);transform:translateY(-150%);transition:transform .25s ease}
+  .nav-links.open{transform:translateY(0)}
+  .nav-toggle{display:block}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;color:#fff;text-align:center;overflow:hidden}
+.hero .ph{position:absolute;inset:0;border-radius:0}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(34,70,59,.55),rgba(43,38,32,.55))}
+.hero-content{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:5rem 22px}
+.hero .badge{display:inline-block;background:var(--gold);color:var(--ink);font-family:"Baloo 2",sans-serif;font-weight:700;padding:.35rem 1rem;border-radius:50px;font-size:.9rem;margin-bottom:1.2rem}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);text-shadow:0 4px 24px rgba(0,0,0,.3)}
+.hero p.tag{font-size:clamp(1.1rem,2.4vw,1.45rem);margin:1rem auto 1.8rem;max-width:600px;font-weight:600}
+.hero .cta-row{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap}
+.hero .serving{margin-top:1.8rem;font-family:"Baloo 2",sans-serif;font-weight:600;letter-spacing:1px;text-transform:uppercase;font-size:.85rem;opacity:.92}
+
+/* ---------- Section basics ---------- */
+section{padding:5.5rem 0}
+.section-head{text-align:center;max-width:680px;margin:0 auto 3rem}
+.eyebrow{font-family:"Baloo 2",sans-serif;font-weight:700;color:var(--rust);text-transform:uppercase;letter-spacing:2px;font-size:.85rem}
+.section-head h2{font-size:clamp(2rem,4.5vw,2.9rem);margin:.4rem 0 .8rem;color:var(--forest-dark)}
+.section-head p{color:var(--muted);font-size:1.1rem}
+
+/* ---------- Adventure strip ---------- */
+.strip{background:var(--forest);color:#fff}
+.strip .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.feature{text-align:center;padding:1rem}
+.feature .emoji{font-size:2.4rem}
+.feature h3{font-size:1.35rem;margin:.6rem 0 .4rem}
+.feature p{opacity:.9}
+@media(max-width:760px){.strip .grid{grid-template-columns:1fr}}
+
+/* ---------- About ---------- */
+.about{display:grid;grid-template-columns:0.85fr 1.15fr;gap:3rem;align-items:center}
+.about .ph{aspect-ratio:4/5;box-shadow:var(--shadow)}
+.about h2{font-size:clamp(2rem,4vw,2.7rem);color:var(--forest-dark);margin-bottom:.3rem}
+.about .role{color:var(--rust);font-family:"Baloo 2",sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:1rem}
+.about p{margin-bottom:1rem;color:#473f33}
+.about .creds{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.about .creds span{background:var(--sand);color:var(--forest-dark);font-weight:700;font-size:.9rem;padding:.4rem .9rem;border-radius:50px}
+@media(max-width:820px){.about{grid-template-columns:1fr}}
+
+/* ---------- Services / pricing ---------- */
+.services{background:var(--sand)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem}
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+.card .ph{border-radius:0;height:190px}
+.card-body{padding:1.6rem 1.7rem 1.8rem}
+.card h3{font-size:1.6rem;color:var(--forest-dark);display:flex;align-items:center;gap:.5rem}
+.card .price{font-family:"Baloo 2",sans-serif;font-weight:800;color:var(--rust);font-size:1.5rem;margin:.2rem 0 .7rem}
+.card .price small{font-weight:600;color:var(--muted);font-size:.95rem}
+.card p{color:#4d4537;margin-bottom:.6rem}
+.card ul{list-style:none;margin-top:.6rem}
+.card ul li{padding-left:1.5rem;position:relative;margin-bottom:.4rem;color:#4d4537}
+.card ul li::before{content:"🐾";position:absolute;left:0;font-size:.85rem;top:.15rem}
+.tag-pill{display:inline-block;background:var(--forest);color:#fff;font-family:"Baloo 2",sans-serif;font-weight:600;font-size:.78rem;padding:.2rem .7rem;border-radius:50px;margin-left:.3rem;vertical-align:middle}
+@media(max-width:760px){.svc-grid{grid-template-columns:1fr}}
+
+/* ---------- Care menu ---------- */
+.care{background:var(--cream)}
+.care-note{max-width:720px;margin:0 auto 2.4rem;text-align:center;color:var(--muted);font-size:1.05rem}
+.care-table{max-width:760px;margin:0 auto;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.care-row{display:flex;justify-content:space-between;gap:1rem;padding:.95rem 1.5rem;border-bottom:1px solid rgba(0,0,0,.06)}
+.care-row:last-child{border-bottom:none}
+.care-row span:first-child{color:#3f382d;font-weight:600}
+.care-row span:last-child{font-family:"Baloo 2",sans-serif;font-weight:700;color:var(--rust);white-space:nowrap}
+
+/* ---------- End of life ---------- */
+.eol{background:var(--forest-dark);color:#fff;text-align:center}
+.eol .wrap{max-width:760px}
+.eol .eyebrow{color:var(--gold)}
+.eol h2{font-size:clamp(1.9rem,4vw,2.6rem);margin:.4rem 0 1.2rem}
+.eol p{font-size:1.15rem;opacity:.95;font-style:italic}
+
+/* ---------- Video section ---------- */
+.video-section{background:var(--sand)}
+.video-frame{max-width:900px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#000;aspect-ratio:16/9}
+.video-frame video{width:100%;height:100%;display:block;object-fit:cover}
+
+/* ---------- Instagram ---------- */
+.insta{text-align:center}
+.insta .handle{font-family:"Baloo 2",sans-serif;font-weight:700;color:var(--rust);font-size:1.2rem;margin-bottom:1.5rem;display:inline-block;text-decoration:none}
+.behold-slot{max-width:1000px;margin:0 auto 1.4rem;min-height:260px;border-radius:var(--radius);background:#fff;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;padding:2rem;border:2px dashed var(--sky)}
+.behold-slot .inner{max-width:520px;color:var(--muted)}
+.behold-slot h4{color:var(--forest-dark);font-size:1.3rem;margin-bottom:.5rem}
+.fallback-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;max-width:1000px;margin:0 auto}
+.fallback-grid .ph{aspect-ratio:1}
+@media(max-width:760px){.fallback-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- Contact / form ---------- */
+.contact{background:var(--sand)}
+.contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:2.6rem;align-items:start}
+.contact-info h2{font-size:clamp(2rem,4vw,2.7rem);color:var(--forest-dark);margin-bottom:.6rem}
+.contact-info p{color:#4d4537;margin-bottom:1.4rem}
+.contact-list{list-style:none}
+.contact-list li{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem;font-weight:600;color:#3f382d}
+.contact-list li .ic{width:42px;height:42px;border-radius:50%;background:var(--rust);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.contact-list li a{text-decoration:none}
+.contact-list li a:hover{color:var(--rust)}
+.hours{margin-top:1.6rem;background:#fff;border-radius:16px;padding:1.1rem 1.3rem;box-shadow:var(--shadow)}
+.hours strong{font-family:"Baloo 2",sans-serif;color:var(--forest-dark)}
+.form-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.form-card .form-head{background:var(--forest);color:#fff;padding:1.1rem 1.5rem;font-family:"Baloo 2",sans-serif;font-weight:700;font-size:1.15rem}
+.form-card iframe{width:100%;border:none;display:block;min-height:760px;background:#fff}
+.form-fallback{padding:.9rem 1.5rem 1.3rem;text-align:center;font-size:.9rem;color:var(--muted)}
+.form-fallback a{color:var(--rust);font-weight:700;text-decoration:none}
+.form-fallback a:hover{text-decoration:underline}
+.form-body{padding:1.6rem 1.7rem 1.8rem}
+.form-body label{display:block;font-family:"Baloo 2",sans-serif;font-weight:600;color:var(--forest-dark);margin:.9rem 0 .35rem;font-size:.98rem}
+.form-body label .req{color:var(--rust)}
+.form-body input,.form-body textarea{width:100%;font-family:"Nunito",sans-serif;font-size:1rem;color:var(--ink);background:var(--cream);border:1.5px solid #e2d6bf;border-radius:12px;padding:.7rem .9rem;transition:border-color .15s ease}
+.form-body input:focus,.form-body textarea:focus{outline:none;border-color:var(--rust)}
+.form-body textarea{resize:vertical;min-height:120px}
+.form-body .submit-row{margin-top:1.3rem}
+.form-body .submit-row .btn{width:100%;justify-content:center}
+.form-note{font-size:.85rem;color:var(--muted);margin-top:.8rem;text-align:center}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:#e9e1d2;text-align:center;padding:3rem 22px}
+footer .mark{width:64px;height:64px;border-radius:50%;background:#fff;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;overflow:hidden;border:2px solid #fff}
+footer .mark img{width:100%;height:100%;object-fit:contain;padding:3px}
+footer .logo-text{font-size:1.5rem;color:#fff}
+footer .serving{letter-spacing:1px;text-transform:uppercase;font-size:.85rem;opacity:.7;margin:.5rem 0 1.2rem}
+footer .social a{color:#e9e1d2;text-decoration:none;font-weight:700;margin:0 .6rem}
+footer .social a:hover{color:var(--gold)}
+footer .fine{margin-top:1.4rem;font-size:.82rem;opacity:.55}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <span class="mark"><img src="images/logo.png" alt="Camp Barrk logo" onerror="this.style.display='none'" /></span>
+      <span class="logo-text">Camp Barrk</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#services">Services &amp; Pricing</a>
+      <a href="#care">Nursing Care</a>
+      <a href="#instagram">Gallery</a>
+      <a class="btn btn-primary" href="#intake">Request an Intake</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <img class="hero-media" src="images/hero.jpg" alt="The Camp Barrk pack on an adventure" />
+  <div class="hero-content">
+    <span class="badge">🐾 Adventure-based dog care</span>
+    <h1>Tired tails &amp; happy hearts, every single day</h1>
+    <p class="tag">Adventure-based dog daycare &amp; boarding in Brooklyn &amp; Queens — hiking, swimming and trail-running your best friend home tired and happy.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#intake">Book a Free Intake</a>
+      <a class="btn btn-ghost" href="#services">See Services</a>
+    </div>
+    <div class="serving">Serving Brooklyn &amp; Queens</div>
+  </div>
+</section>
+
+<!-- ================= ADVENTURE STRIP ================= -->
+<section class="strip">
+  <div class="wrap">
+    <div class="grid">
+      <div class="feature">
+        <div class="emoji">🥾</div>
+        <h3>Big Adventure Days</h3>
+        <p>Tuesdays &amp; Thursdays: swimming, trail running, hiking, rock scrambling &amp; bikejoring — 8&ndash;16 miles. Your pup comes home tired and happy.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">🐕</div>
+        <h3>Easygoing Social Days</h3>
+        <p>Fridays are lower-impact — perfect for social dogs with limited mileage, seniors, or pups with mobility needs.</p>
+      </div>
+      <div class="feature">
+        <div class="emoji">🩺</div>
+        <h3>Skilled, Loving Care</h3>
+        <p>15+ years as a veterinary technician means meds, senior care &amp; medical needs are handled with confidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap about">
+    <div class="ph" data-label="Photo of Fallon"><img src="images/fallon.jpg" alt="Fallon, founder of Camp Barrk" onerror="this.style.display='none'" /></div>
+    <div>
+      <span class="eyebrow">Meet Fallon</span>
+      <h2>Hi, guys! Fallon here!!</h2>
+      <div class="role">Founder &amp; Licensed Veterinary Technician</div>
+      <p>A little bit about my background — I have been a Veterinary Technician for over a decade. I started as a volunteer in wildlife rehabilitation at The Wild Bird Fund in Manhattan. I fell in love with it — it was hard not to with all of the little goslings.</p>
+      <p>As I progressed into clinical medicine at Bay Ridge Animal Hospital, I wanted to add to my career, so I became a dog walker at Bark Slope. Eventually I moved over to Marine Park Veterinary Group and worked as their primary surgical technician with a focus in anesthesiology, while continuing my relationship with dog walking as a manager for Brooklyn Bark.</p>
+      <p>The balance of animal hospitality and veterinary medicine has strengthened my relationship with all species, and I found a love for dogs that I never expected. I feel truly lucky and proud to be where I am now — fortunate to provide the best life possible for both of my pups, my kitty, and all of our furry friends.</p>
+      <div class="creds">
+        <span>🩺 15+ yrs Veterinary Technician</span>
+        <span>🏔️ Adventure-led care</span>
+        <span>❤️ Fear-free philosophy</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What we offer</span>
+      <h2>Services &amp; Pricing</h2>
+      <p>Every dog starts with a free virtual intake. An in-person meet &amp; greet ($20) is required before any onsite services.</p>
+    </div>
+    <div class="svc-grid">
+
+      <div class="card">
+        <div class="ph" data-label="Daycare adventure photo"><img src="images/daycare.jpg" alt="Dogs on a daycare adventure" onerror="this.style.display='none'" /></div>
+        <div class="card-body">
+          <h3>🌲 Daycare</h3>
+          <div class="price">$85 <small>/ day</small></div>
+          <p>Recommended 2&ndash;3 days a week. Choose the energy that fits your pup:</p>
+          <ul>
+            <li><strong>Tue &amp; Thu — High impact:</strong> swimming, trail running, hiking, rock scrambling or bikejoring. 8&ndash;16 miles. Tired &amp; happy guaranteed.</li>
+            <li><strong>Fri — Low impact:</strong> social days for dogs limited in mileage or with mobility issues.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="ph" data-label="Boarding / cozy photo"><img src="images/boarding.jpg" alt="A dog resting after adventure" onerror="this.style.display='none'" /></div>
+        <div class="card-body">
+          <h3>🏕️ Boarding</h3>
+          <div class="price">$100 <small>/ day</small> <span class="tag-pill">Multi-dog discounts</span></div>
+          <p>A home away from home. Please bring their food, any medications or supplements, and an article of clothing that smells like you.</p>
+          <ul>
+            <li>Discounts available for additional dogs</li>
+            <li>Long-term boarding starts at <strong>$2,000 / 4 weeks</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="ph" data-label="Meet &amp; greet photo"><img src="images/meet.jpg" alt="Meeting a new pup" onerror="this.style.display='none'" /></div>
+        <div class="card-body">
+          <h3>👋 Intake &amp; Meet</h3>
+          <div class="price">Free <small>virtual intake</small></div>
+          <p>We start with a free virtual intake to get to know you and your pet.</p>
+          <ul>
+            <li>In-person meet &amp; greet: <strong>$20</strong></li>
+            <li>Required before any onsite services</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="ph" data-label="Adventure / pack photo"><img src="images/pack.jpg" alt="The Camp Barrk pack" onerror="this.style.display='none'" /></div>
+        <div class="card-body">
+          <h3>🦴 The Camp Barrk Promise</h3>
+          <div class="price">Photos &amp; updates <small>every visit</small></div>
+          <p>Your dog is supervised at all times and comes home with stories.</p>
+          <ul>
+            <li>Real adventures in nature, every day</li>
+            <li>Individual photo &amp; text updates</li>
+            <li>Senior &amp; special-needs accommodations</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= END OF LIFE ================= -->
+<section class="eol">
+  <div class="wrap">
+    <span class="eyebrow">A tender part of our work</span>
+    <h2>End-of-Life Care</h2>
+    <p>“It's my personal belief that your furry family member gets to pass with quality of life at the forefront, and that can look totally different for every household. Let me help you carry your grief, empower your choices, remember the best of times, and ensure that they enjoy their final months with the utmost care. Everyone wants to go out with love and dignity.”</p>
+    <p style="margin-top:1.4rem;font-style:normal;opacity:.85;font-size:1rem">Reach out to talk through compassionate, individualized options for your dog.</p>
+  </div>
+</section>
+
+<!-- ================= CARE MENU ================= -->
+<section class="care" id="care">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Veterinary-grade add-ons</span>
+      <h2>Nursing &amp; Medical Care</h2>
+    </div>
+    <p class="care-note">As a licensed veterinary technician with 15+ years of experience, Fallon can administer medications and provide skilled nursing care that most dog services can't. We always review medication instructions with you in detail.</p>
+    <div class="care-table">
+      <div class="care-row"><span>Oral medications, ophthalmic, otic &amp; topical meds</span><span>$5 each</span></div>
+      <div class="care-row"><span>Injections (incl. IM)</span><span>$10 each</span></div>
+      <div class="care-row"><span>Bandage dressings / soft casts</span><span>$15</span></div>
+      <div class="care-row"><span>SubQ fluids</span><span>$20</span></div>
+      <div class="care-row"><span>Medicated bath</span><span>$30</span></div>
+      <div class="care-row"><span>Splints</span><span>$35</span></div>
+      <div class="care-row"><span>Virtual consultation with veterinary staff</span><span>$75</span></div>
+      <div class="care-row"><span>In-person transport &amp; veterinary consultation (clinic visit)</span><span>$100</span></div>
+      <div class="care-row"><span>Emergency home visit</span><span>$120</span></div>
+      <div class="care-row"><span>In-person ER transport &amp; consultation with vet staff</span><span>$140</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEO ================= -->
+<section class="video-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">A day at camp</span>
+      <h2>See the Pack in Action</h2>
+      <p>Real adventures in nature, every single day — this is what your dog comes home from.</p>
+    </div>
+    <div class="video-frame">
+      <video src="images/hero.mp4" autoplay muted loop playsinline controls poster="images/hero.jpg"></video>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSTAGRAM ================= -->
+<section class="insta" id="instagram">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">From the trail</span>
+      <h2>Follow the Adventures</h2>
+    </div>
+    <a class="handle" href="https://www.instagram.com/campbarrk/" target="_blank" rel="noopener">@campbarrk</a>
+
+    <!-- Behold live Instagram feed for @campbarrk -->
+    <behold-widget feed-id="fWdGeoGzzbxdHeKn3dIL"></behold-widget>
+
+    <div style="margin-top:1.8rem">
+      <a class="btn btn-forest" href="https://www.instagram.com/campbarrk/" target="_blank" rel="noopener">Follow @campbarrk on Instagram</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT / INTAKE ================= -->
+<section class="contact" id="intake">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow">Let's meet your pup</span>
+      <h2>Request an Intake</h2>
+      <p>Fill out the form and we'll be in touch to schedule your free virtual intake. Questions first? Reach us directly — full transparency is important to us.</p>
+      <ul class="contact-list">
+        <li><span class="ic">✉️</span><a href="mailto:info@campbarrk.com">info@campbarrk.com</a></li>
+        <li><span class="ic">📞</span><a href="tel:+19174970095">917-497-0095</a></li>
+        <li><span class="ic">📸</span><a href="https://www.instagram.com/campbarrk/" target="_blank" rel="noopener">@campbarrk</a></li>
+        <li><span class="ic">📍</span>Serving Brooklyn &amp; Queens</li>
+      </ul>
+      <div class="hours">
+        <strong>Camp Hours</strong><br/>
+        Mon&ndash;Sun, 9am&ndash;5pm.<br/>
+        <span style="color:var(--muted);font-size:.92rem">We require 24 hours notice for any cancellations or a $10 fee may apply.</span>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div class="form-head">🐾 Say Hello</div>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdhC3oR2DxxPHL9XYAJrriDrlQNsKD9oTvs4RW8dgAI9yqZoA/viewform?embedded=true"
+        width="100%" height="820" frameborder="0" marginheight="0" marginwidth="0"
+        title="Camp Barrk Interest Form"
+        loading="lazy">Loading…</iframe>
+      <div class="form-fallback">
+        Form not loading? <a href="https://forms.gle/Eh3BBF4xdLWzPGKT6" target="_blank" rel="noopener">Open it in a new tab →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="mark"><img src="images/logo.png" alt="Camp Barrk logo" onerror="this.parentElement.style.display='none'"/></div>
+  <div class="logo-text">Camp Barrk</div>
+  <div class="serving">Serving Brooklyn &amp; Queens</div>
+  <div class="social">
+    <a href="mailto:info@campbarrk.com">info@campbarrk.com</a> ·
+    <a href="tel:+19174970095">917-497-0095</a> ·
+    <a href="https://www.instagram.com/campbarrk/" target="_blank" rel="noopener">@campbarrk</a>
+  </div>
+  <div class="fine">© <span id="yr"></span> Camp Barrk. Made with love (and lots of paws).</div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  // Close mobile menu on link tap
+  document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+
+  // Contact form: POST to Formspree if configured, otherwise open email app
+  (function(){
+    var form = document.getElementById('contactForm');
+    if(!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var name=form.name.value.trim(), email=form.email.value.trim(),
+          phone=form.phone.value.trim(), msg=form.message.value.trim();
+      var endpoint = form.getAttribute('data-formspree');
+      if(endpoint){
+        fetch(endpoint,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+          .then(function(r){ if(r.ok){ form.innerHTML='<p style="padding:1rem 0;font-weight:700;color:var(--forest)">Thanks, '+name+'! We\'ll be in touch soon. 🐾</p>'; }
+                             else { alert('Something went wrong — please email info@campbarrk.com'); } })
+          .catch(function(){ alert('Something went wrong — please email info@campbarrk.com'); });
+      } else {
+        var subject = encodeURIComponent('Camp Barrk inquiry from ' + name);
+        var body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nPhone: '+phone+'\n\n'+msg);
+        window.location.href = 'mailto:info@campbarrk.com?subject='+subject+'&body='+body;
+      }
+    });
+  })();
+</script>
+<!-- Behold Instagram widget loader -->
+<script>
+  (() => {
+    const d=document,s=d.createElement("script");s.type="module";
+    s.src="https://w.behold.so/widget.js";d.head.append(s);
+  })();
+</script>
+</body>
+</html>
