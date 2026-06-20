@@ -118,6 +118,9 @@ section{padding:5.5rem 0}
 
 /* ---------- About ---------- */
 .about{display:grid;grid-template-columns:0.85fr 1.15fr;gap:3rem;align-items:center}
+.about.flip{grid-template-columns:1.15fr 0.85fr}
+.about-arthur{background:var(--cream)}
+#arthur .ph img{object-position:center 22%}
 .about .ph{aspect-ratio:4/5;box-shadow:var(--shadow)}
 .about h2{font-size:clamp(2rem,4vw,2.7rem);color:var(--forest-dark);margin-bottom:.3rem}
 .about .role{color:var(--rust);font-family:"Baloo 2",sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:1rem}
@@ -160,8 +163,9 @@ section{padding:5.5rem 0}
 
 /* ---------- Video section ---------- */
 .video-section{background:var(--sand)}
-.video-frame{max-width:900px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#000;aspect-ratio:16/9}
-.video-frame video{width:100%;height:100%;display:block;object-fit:cover}
+.video-frame{max-width:760px;margin:0 auto;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#000;aspect-ratio:4/3}
+/* object-position Y controls the crop: higher % = lower in the clip (more dogs, less sky) */
+.video-frame video{width:100%;height:100%;display:block;object-fit:cover;object-position:center 88%}
 
 /* ---------- Instagram ---------- */
 .insta{text-align:center}
@@ -239,12 +243,12 @@ footer .fine{margin-top:1.4rem;font-size:.82rem;opacity:.55}
   <div class="hero-content">
     <span class="badge">🐾 Adventure-based dog care</span>
     <h1>Tired tails &amp; happy hearts, every single day</h1>
-    <p class="tag">Adventure-based dog daycare &amp; boarding in Brooklyn &amp; Queens — hiking, swimming and trail-running your best friend home tired and happy.</p>
+    <p class="tag">Adventure-based dog daycare &amp; boarding across Brooklyn, Queens &amp; Manhattan — hiking, swimming and trail-running your best friend home tired and happy.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="#intake">Book a Free Intake</a>
       <a class="btn btn-ghost" href="#services">See Services</a>
     </div>
-    <div class="serving">Serving Brooklyn &amp; Queens</div>
+    <div class="serving">Serving Brooklyn, Queens &amp; Manhattan</div>
   </div>
 </section>
 
@@ -291,6 +295,25 @@ footer .fine{margin-top:1.4rem;font-size:.82rem;opacity:.55}
   </div>
 </section>
 
+<!-- ================= MEET ARTHUR ================= -->
+<section class="about-arthur" id="arthur">
+  <div class="wrap about flip">
+    <div>
+      <span class="eyebrow">Meet Arthur</span>
+      <h2>Fallon's Dad &amp; right-hand</h2>
+      <div class="role">The gentlest soul at camp</div>
+      <p>This is my father, Arthur — the kindest, gentlest soul I know. Dad has a big heart for all of our little furry friends, and a special gift for charming even the shyest pups out of their shell.</p>
+      <p>He's the one who opened my life up to nature, and his unwavering support in every endeavor is what made this whole dream of working alongside animals possible. I grew up in a National Park right here in NYC, so our weekends were spent hiking through the preserve, fishing, and caring for our local wildlife.</p>
+      <p>His whole family passed down lifelong lessons in valuing our planet. I couldn't be more grateful to call him my Dad.</p>
+      <div class="creds">
+        <span>🌲 Lifelong nature lover</span>
+        <span>🐾 Whisperer of shy pups</span>
+      </div>
+    </div>
+    <div class="ph" data-label="Photo of Arthur"><img src="images/arthur.jpg" alt="Arthur, Fallon's dad, with the pack" onerror="this.style.display='none'" /></div>
+  </div>
+</section>
+
 <!-- ================= SERVICES ================= -->
 <section class="services" id="services">
   <div class="wrap">
@@ -310,6 +333,7 @@ footer .fine{margin-top:1.4rem;font-size:.82rem;opacity:.55}
           <ul>
             <li><strong>Tue &amp; Thu — High impact:</strong> swimming, trail running, hiking, rock scrambling or bikejoring. 8&ndash;16 miles. Tired &amp; happy guaranteed.</li>
             <li><strong>Fri — Low impact:</strong> social days for dogs limited in mileage or with mobility issues.</li>
+            <li>📍 Serving Brooklyn &amp; parts of Queens</li>
           </ul>
         </div>
       </div>
@@ -323,6 +347,7 @@ footer .fine{margin-top:1.4rem;font-size:.82rem;opacity:.55}
           <ul>
             <li>Discounts available for additional dogs</li>
             <li>Long-term boarding starts at <strong>$2,000 / 4 weeks</strong></li>
+            <li>📍 Serving Brooklyn, Queens &amp; Manhattan</li>
           </ul>
         </div>
       </div>
@@ -391,20 +416,6 @@ footer .fine{margin-top:1.4rem;font-size:.82rem;opacity:.55}
   </div>
 </section>
 
-<!-- ================= VIDEO ================= -->
-<section class="video-section">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">A day at camp</span>
-      <h2>See the Pack in Action</h2>
-      <p>Real adventures in nature, every single day — this is what your dog comes home from.</p>
-    </div>
-    <div class="video-frame">
-      <video src="images/hero.mp4" autoplay muted loop playsinline controls poster="images/hero.jpg"></video>
-    </div>
-  </div>
-</section>
-
 <!-- ================= INSTAGRAM ================= -->
 <section class="insta" id="instagram">
   <div class="wrap">
@@ -434,7 +445,7 @@ footer .fine{margin-top:1.4rem;font-size:.82rem;opacity:.55}
         <li><span class="ic">✉️</span><a href="mailto:info@campbarrk.com">info@campbarrk.com</a></li>
         <li><span class="ic">📞</span><a href="tel:+19174970095">917-497-0095</a></li>
         <li><span class="ic">📸</span><a href="https://www.instagram.com/campbarrk/" target="_blank" rel="noopener">@campbarrk</a></li>
-        <li><span class="ic">📍</span>Serving Brooklyn &amp; Queens</li>
+        <li><span class="ic">📍</span>Boarding: Brooklyn, Queens &amp; Manhattan · Daycare: Brooklyn &amp; parts of Queens</li>
       </ul>
       <div class="hours">
         <strong>Camp Hours</strong><br/>
@@ -461,7 +472,7 @@ footer .fine{margin-top:1.4rem;font-size:.82rem;opacity:.55}
 <footer>
   <div class="mark"><img src="images/logo.png" alt="Camp Barrk logo" onerror="this.parentElement.style.display='none'"/></div>
   <div class="logo-text">Camp Barrk</div>
-  <div class="serving">Serving Brooklyn &amp; Queens</div>
+  <div class="serving">Serving Brooklyn, Queens &amp; Manhattan</div>
   <div class="social">
     <a href="mailto:info@campbarrk.com">info@campbarrk.com</a> ·
     <a href="tel:+19174970095">917-497-0095</a> ·
